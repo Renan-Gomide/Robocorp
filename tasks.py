@@ -191,7 +191,7 @@ def execute_scraper():
         articles_data = scraper.process_articles()
         scraper.save_to_excel(articles_data)
     except Exception as e:
-        print(f"Error in execute_scraper: {e}")
+        logging.error(f"Error in execute_scraper: {e}")
     finally:
         scraper.driver.quit()
         logging.info("Process completed.")
