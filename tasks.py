@@ -1,25 +1,12 @@
-from selenium import webdriver
-from selenium.webdriver.chrome.service import Service
-from selenium.webdriver.chrome.options import Options
-
-chrome_options = Options()
-chrome_options.add_argument("--headless")  # Se quiser rodar em modo headless
-chrome_options.add_argument("--no-sandbox")
-chrome_options.add_argument("--disable-dev-shm-usage")
-
-
-
-
-#####
 from robocorp.tasks import task
 import os
 import re
 import configparser
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
+# from selenium import webdriver
+# from selenium.webdriver.common.by import By
+# from selenium.webdriver.common.keys import Keys
+# from selenium.webdriver.support.ui import WebDriverWait
+# from selenium.webdriver.support import expected_conditions as EC
 from urllib.parse import urlparse
 from time import sleep
 import urllib.request
@@ -27,6 +14,14 @@ from PIL import Image
 from io import BytesIO
 from openpyxl import Workbook
 import logging
+
+from RPA.Browser.Selenium import Selenium
+
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
