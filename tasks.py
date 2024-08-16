@@ -30,6 +30,7 @@ class NewsScraper:
 
     def search_news(self):
         url = 'https://www.news.com.au/'
+        waiting_time = 3
         self.driver.get(url)
 
         try:
@@ -41,7 +42,7 @@ class NewsScraper:
             search_box.send_keys(self.query)
             search_box.send_keys(Keys.RETURN)
             logging.info("Search submitted.")
-            sleep(5)
+            # sleep(5)
 
             filter_tab = WebDriverWait(self.driver, 10).until(
                 EC.element_to_be_clickable((By.XPATH, '//*[@id="refine"]'))
@@ -75,10 +76,10 @@ class NewsScraper:
             )
             time_filter.click()
             logging.info(f"Time filter applied for the last {self.time}.")
-            sleep(3)
+            sleep(waiting_time)
 
             filter_tab.click()
-            sleep(2)
+            sleep(waiting_time)
 
         except Exception as e:
             logging.error(f"Error applying the filters: {e}")
@@ -142,7 +143,7 @@ class NewsScraper:
                     "Contains Money": contains_money
                 })
 
-                sleep(1)
+                sleep(waiting_time)
 
             except Exception as e:
                 logging.warning(f"Error processing the article: {e}")
