@@ -12,9 +12,11 @@ from time import sleep
 import urllib.request
 from PIL import Image
 from io import BytesIO
-from RPA.Excel.Files import Files
 from openpyxl import Workbook
+import logging
 
+
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 class NewsScraper:
     def __init__(self, config_file='config.ini'):
@@ -33,10 +35,13 @@ class NewsScraper:
         try:
             search_button = self.driver.find_element(By.XPATH, '/html/body/nav/form/button')
             search_button.click()
+            logging.info("Search button clicked.")
+
 
             search_box = self.driver.find_element(By.XPATH, '/html/body/nav/form/input')
             search_box.send_keys(self.query)
             search_box.send_keys(Keys.RETURN)
+            logging.info("Search submitted.")
             sleep(5)
 
             filter_tab = WebDriverWait(self.driver, 10).until(
@@ -56,6 +61,7 @@ class NewsScraper:
                 EC.element_to_be_clickable((By.XPATH, category_xpath))
             )
             category_filter.click()
+            logging.info(f"Category filter '{self.category}' applied.")
 
             time_xpath_map = {
                 'day': '//*[@id="custom-facet-1"]/div/div[2]/div/ul/li[2]/label',
@@ -69,13 +75,14 @@ class NewsScraper:
                 EC.element_to_be_clickable((By.XPATH, time_xpath))
             )
             time_filter.click()
+            logging.info(f"Time filter applied for the last {self.time}.")
             sleep(3)
 
             filter_tab.click()
             sleep(2)
 
         except Exception as e:
-            print(f"Error in search_news: {e}")
+            logging.error(f"Error applying the filters: {e}")
             self.driver.quit()
             raise
 
@@ -86,9 +93,9 @@ class NewsScraper:
             image = Image.open(BytesIO(image_data))
             os.makedirs(os.path.dirname(filename), exist_ok=True)
             image.save(filename, format=format)
-            print(f"Image saved to {filename}")
+            logging.info(f"Image saved as '{filename}'.")
         except Exception as e:
-            print(f"Error downloading image {image_url}: {e}")
+            logging.error(f"Error downloading or saving the image: {e}")
 
     def process_articles(self):
         articles = self.driver.find_elements(By.CLASS_NAME, 'storyblock')
@@ -139,7 +146,7 @@ class NewsScraper:
                 sleep(1)
 
             except Exception as e:
-                print(f"Error processing article: {e}")
+                logging.warning(f"Error processing the article: {e}")
         return articles_data
 
     def save_to_excel(self, articles_data):
@@ -165,7 +172,7 @@ class NewsScraper:
 
         # Salva o workbook no arquivo Excel
         workbook.save(file_path)
-        print(f"Excel file saved successfully to {file_path}")
+        logging.info("Data saved in 'news_data.xlsx'.")
     
     def run(self):
         try:
@@ -173,7 +180,7 @@ class NewsScraper:
             articles_data = self.process_articles()
             self.save_to_excel(articles_data)
         except Exception as e:
-            print(f"Error in run: {e}")
+            logging.error(f"Error in the scraping process: {e}")
         finally:
             self.driver.quit()
 
@@ -187,6 +194,7 @@ def execute_scraper():
         print(f"Error in execute_scraper: {e}")
     finally:
         scraper.driver.quit()
+        logging.info("Process completed.")
 
 @task
 def run():
