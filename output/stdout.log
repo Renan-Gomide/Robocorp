@@ -1,0 +1,27 @@
+
+Collecting tasks from: tasks.py
+================================= Running: [96mrun[0m =================================
+Image saved to output/news_images\2da6fdec7367e7f9c1e7436e07949494.jpeg
+Image saved to output/news_images\a58d53e872fa979b08eda8e04f4e9608.jpeg
+Image saved to output/news_images\da3e96d55916af12816d63b8230c6569.jpeg
+Image saved to output/news_images\4c42a6d9019eeb150797d22fa40268cc.jpeg
+Image saved to output/news_images\9d17bc3351037a010486d12da4ecf45d.jpeg
+Image saved to output/news_images\b7df58f9d22a9f5fe04fe08c4d17e4c3.jpeg
+Image saved to output/news_images\96a123c0753cbad772305fafc21584cb.jpeg
+Image saved to output/news_images\b1c60a7e91961d1bd3fe2b661a6d79b5.jpeg
+Image saved to output/news_images\f202e7a10463e5ba33fa0a9334533d4d.jpeg
+Image saved to output/news_images\2584f646b4d713d5bf42b404d8ccc6a1.jpeg
+Image saved to output/news_images\09dd5bc00ca4d679b00524a7dafe6157.jpeg
+Image saved to output/news_images\fe8a23f9e06e4b532946f00f167dbb95.jpeg
+Image saved to output/news_images\3edeae1dbc8c18cf4dfb6343049dea1f.jpeg
+Image saved to output/news_images\a17147aa3ee9dfa2dee63e99ffe0303d.jpeg
+Image saved to output/news_images\8437f44a0d09b49c3b3945dac354cd7a.jpeg
+Image saved to output/news_images\26e3c79087156e34b58da64fa911883e.jpeg
+Image saved to output/news_images\1f2eb21b595010b5daab36579b483d6a.jpeg
+Image saved to output/news_images\c9ae12c82a6aaafe6b1ada577bd3d080.jpeg
+Image saved to output/news_images\cf435fd52beb71b78b766536a2734c20.jpeg
+Image saved to output/news_images\5b02405445d81e43abf6696cb2791412.jpeg
+Excel file saved successfully to output\news_data.xlsx
+[96mrun[0m status: PASS
+================================================================================
+Robocorp Log (html): d:\Dropbox\04-Pessoal\05_Github\Portfolio\08_Selenium-scraping\v0.1\rpa-robot\output\log.html

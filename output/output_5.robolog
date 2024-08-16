@@ -1,0 +1,577 @@
+V 0.0.4
+T 2024-08-16T20:08:43.465+00:00
+ID 5|56560734-5c0b-11ef-8f61-08626698fe16
+I "sys.platform=win32"
+I "python=3.10.12 | packaged by conda-forge | (main, Jun 23 2023, 22:34:57) [MSC v.1936 64 bit (AMD64)]"
+M a:"tasks.py"
+RR a|0.012
+M l:"run"
+M m:"tasks"
+M n:"d:\\Dropbox\\04-Pessoal\\05_Github\\Portfolio\\08_Selenium-scraping\\v0.1\\rpa-robot\\tasks.py"
+M o:null
+P k:l|m|n|o|215
+RT k|5.536
+M t:"METHOD"
+RE k|t|5.538
+M v:"execute_scraper"
+M e:""
+P u:v|m|n|e|203
+RE u|t|5.538
+M bO:"NewsScraper.process_articles"
+P bN:bO|m|n|e|93
+RE bN|t|37.628
+M b4:"for article in articles"
+P b3:b4|m|n|e|101
+M b5:"FOR"
+RE b3|b5|37.635
+M b7:"Step: for article in articles"
+P b6:b7|m|n|e|101
+M b8:"FOR_STEP"
+RE b6|b8|98.389
+M c0:"NewsScraper.download_and_save_image"
+P cZ:c0|m|n|e|82
+RE cZ|t|98.57
+M dj:"open"
+M dk:"PIL.Image"
+M dl:"C:\\ProgramData\\robocorp\\ht\\2dd37e0_b1f3c24_691db988\\lib\\site-packages\\PIL\\Image.py"
+P di:dj|dk|dl|e|3375
+SE di|t|101.667
+M dm:"fp"
+M dn:"BytesIO"
+M gY:"<_io.BytesIO object at 0x00000184B89A9D00>"
+EA dm|dn|gY
+M dp:"mode"
+M z:"str"
+M dq:"'r'"
+EA dp|z|dq
+M dr:"formats"
+M G:"NoneType"
+M H:"None"
+EA dr|G|H
+P ds:dj|dk|dl|e|3491
+M dt:"JpegImageFile"
+M iL:"<PIL.JpegImagePlugin.JpegImageFile image mode=RGB size=1280x720 at 0x184B739E020>"
+R ds|dt|iL|101.683
+M j:"PASS"
+EE t|j|101.683
+P dv:c0|m|n|e|86
+M dw:"image"
+AS dv|dw|dt|iL|101.683
+M dy:"Image.save"
+P dx:dy|dk|dl|e|2481
+SE dx|t|101.683
+M iJ:"'output/news_images\\\\5b02405445d81e43abf6696cb2791412.jpeg'"
+EA dm|z|iJ
+M c2:"format"
+M c3:"'JPEG'"
+EA c2|z|c3
+M dz:"params"
+M bt:"dict"
+M dA:"{}"
+EA dz|bt|dA
+EE t|j|101.712
+M dB:"stdout"
+M iM:"Image saved to output/news_images\\5b02405445d81e43abf6696cb2791412.jpeg"
+C dB|iM|101.712
+M dD:"\n"
+C dB|dD|101.712
+EE t|j|101.712
+P dE:bO|m|n|e|121
+M dF:"relative_image_path"
+M iN:"'news_images\\\\5b02405445d81e43abf6696cb2791412.jpeg'"
+AS dE|dF|z|iN|101.713
+P dH:bO|m|n|e|123
+M dI:"search_phrases"
+M T:"list"
+M dJ:"['healthcare']"
+AS dH|dI|T|dJ|101.713
+P dK:bO|m|n|e|124
+M dL:"phrase_count"
+M al:"int"
+M eo:"0"
+AS dK|dL|al|eo|101.713
+P dN:bO|m|n|e|127
+M dO:"money_pattern"
+M dP:"Pattern"
+M dQ:"re.compile('(\\\\$\\\\d+(\\\\.\\\\d{1,2})?)|(\\\\d+\\\\s?(dollars|USD))')"
+AS dN|dO|dP|dQ|101.714
+P dR:bO|m|n|e|128
+M dS:"contains_money"
+M M:"bool"
+M N:"False"
+AS dR|dS|M|N|101.714
+EE b8|j|102.73
+EE b5|j|102.73
+P iO:bO|m|n|e|143
+M iP:"[{'Title': \"Moderate women voters are not necessarily \u2018shoo-ins' for Kamala Harris\", 'Date': '16/8/2024', 'Description': 'The top issues of independent, moderate female voters are the \u201ceconomy, immigration, crime, healthcare and rising prices\u201d, according to New York...', 'Picture Filename': 'news_images\\\\2da6fdec7367e7f9c1e7436e07949494.jpeg', 'Count of Search Phrases': 1, 'Contains Money': False}, {'Title': \"'Pro Medicus again hit the ball out of the park'\", 'Date': '16/8/2024', 'Description': 'ASX health stocks have finished the week up 0.8% as Morgans healthcare analyst Scott Power says \u201cPro Medicus again hit the ball out of the park\u201d with their FY24 results.', 'Picture Filename': 'news_images\\\\a58d53e872fa979b08eda8e04f4e9608.jpeg', 'Count of Search Phrases': 1, 'Contains Money': False}, {'Title': 'Crowd leaves as Biden begins talking', 'Date': '16/8/2024', 'Description': 'Dozens of Democrats left an election rally event early when outgoing US President Joe Biden took to the stage to speak.', 'Picture Filename': 'news_images\\\\da3e96d55916af12816d63b8230c6569.jpeg', 'Count of Search Phrases': 0, 'Contains Money': False}, {'Title': '\u2018Long time coming\u2019: UK descending into \u2018chaos\u2019', 'Date': '15/8/2024', 'Description': 'On tonight\u2019s episode of Paul Murray Live, Sky News host Paul Murray discusses the United Kingdom descending into chaos, mental healthcare, US...', 'Picture Filename': 'news_images\\\\4c42a6d9019eeb150797d22fa40268cc.jpeg', 'Count of Search Phrases': 1, 'Contains Money': False}, {'Title': 'Texas woman who fled state for abortion makes case for Harris campaign', 'Date': '15/8/2024', 'Description': 'A Texas woman forced to flee the state for an emergency abortion recounted her harrowing ordeal to Reuters, as she makes her case for Democratic...', 'Picture Filename': 'news_images\\\\9d17bc3351037a010486d12da4ecf45d.jpeg', 'Count of Search Phrases': 0, 'Contains Money': False}, {'Title': \"Indian healthcare workers demand justice after colleague's rape, murder; protests spread nationwide\", 'Date': '14/8/2024', 'Description': 'Healthcare workers in India demand changes following the rape and murder of their colleague.', 'Picture Filename': 'news_images\\\\b7df58f9d22a9f5fe04fe08c4d17e4c3.jpeg', 'Count of Search Phrases': 2, 'Contains Money': False}, {'Title': 'ASX 200 finishes up with most sectors \u2018in the green\u2019', 'Date': '14/8/2024', 'Description': 'Sky News Business Reporter Edward Boyd says the ASX 200 opened higher this morning with most sectors \u201cin the green\u201d.', 'Picture Filename': 'news_images\\\\96a123c0753cbad772305fafc21584cb.jpeg', 'Count of Search Phrases': 0, 'Contains Money': False}, {'Title': 'How ASX responded to shock court action', 'Date': '14/8/2024', 'Description': 'Australia\u2019s corporate watchdog sparked alarm in the markets after it announced court action against the ASX over alleged misleading statements.', 'Picture Filename': 'news_images\\\\b1c60a7e91961d1bd3fe2b661a6d79b5.jpeg', 'Count of Search Phrases': 0, 'Contains Money': False}, {'Title': \"CQC: Risks not adequately mitigated during Calocane's care\", 'Date': '13/8/2024', 'Description': 'Care Quality Commission\\'s Chris Dzikiti has said medical and police records showed Valdo Calocane would have relapsed into \"distressing and potentially...', 'Picture Filename': 'news_images\\\\f202e7a10463e5ba33fa0a9334533d4d.jpeg', 'Count of Search Phrases': 0, 'Contains Money': False}, {'Title': 'Healthcare stocks dragged down by CSL', 'Date': '13/8/2024', 'Description': 'The ASX made a third-straight day of gains after a week of global volatility, with financial and consumer stocks pushing a marginal gain.', 'Picture Filename': 'news_images\\\\2584f646b4d713d5bf42b404d8ccc6a1.jpeg', 'Count of Search Phrases': 1, 'Contains Money': False}, {'Title': 'CSL drags health sector lower', 'Date': '13/8/2024', 'Description': 'Earnings season is now in full swing now as heavyweight CSL dropped 4pc, dragging the health sector down.', 'Picture Filename': 'news_images\\\\09dd5bc00ca4d679b00524a7dafe6157.jpeg', 'Count of Search Phrases': 0, 'Contains Money': False}, {'Title': 'Healthcare sector cops a whack as the ASX 200 flails about', 'Date': '12/8/2024', 'Description': 'Top 10 at 11 is Stockhead\u2019s super quick morning look at the ASX and its market sectors and is a way to help frame the day in trading.', 'Picture Filename': 'news_images\\\\fe8a23f9e06e4b532946f00f167dbb95.jpeg', 'Count of Search Phrases': 1, 'Contains Money': False}, {'Title': 'Australian state given shameful title', 'Date': '12/8/2024', 'Description': 'One state is famed for its spectacular weather and enviable lifestyle, but the beauty masks a disturbing crisis.', 'Picture Filename': 'news_images\\\\3edeae1dbc8c18cf4dfb6343049dea1f.jpeg', 'Count of Search Phrases': 0, 'Contains Money': False}, {'Title': \"'Concerning': IV fluid shortage to hit the 'whole healthcare system'\", 'Date': '12/8/2024', 'Description': 'Australian Patients Association Chair Michele Robbins discusses the \u201cconcerning\u201d IV fluid shortage affecting the \u201cwhole healthcare system\u201d.', 'Picture Filename': 'news_images\\\\a17147aa3ee9dfa2dee63e99ffe0303d.jpeg', 'Count of Search Phrases': 2, 'Contains Money': False}, {'Title': \"Australia's healthcare system 'not fit for purpose'\", 'Date': '11/8/2024', 'Description': 'Pfizer\u2019s Australia and New Zealand Managing Director Anne Harris claims Australia\u2019s current healthcare system is currently \u201cnot fit for purpose\u201d....', 'Picture Filename': 'news_images\\\\8437f44a0d09b49c3b3945dac354cd7a.jpeg', 'Count of Search Phrases': 2, 'Contains Money': False}, {'Title': 'ASX health stocks dip, but recover', 'Date': '9/8/2024', 'Description': 'ASX health stocks regained ground on Friday but still were down over the past five days. Yep, it\u2019s been a volatile old week, says Morgans expert Scott Power.    ', 'Picture Filename': 'news_images\\\\26e3c79087156e34b58da64fa911883e.jpeg', 'Count of Search Phrases': 0, 'Contains Money': False}, {'Title': 'Sad reason athletes in for \u2018shock of the world\u2019', 'Date': '9/8/2024', 'Description': 'They\u2019ve become the nation\u2019s heroes, but there\u2019s a myth that needs to be busted about Olympic athletes.', 'Picture Filename': 'news_images\\\\1f2eb21b595010b5daab36579b483d6a.jpeg', 'Count of Search Phrases': 0, 'Contains Money': False}, {'Title': 'Worrying symptoms linked to supplement', 'Date': '8/8/2024', 'Description': 'An ingredient, thought to help with weight loss, can cause some concerning symptoms.', 'Picture Filename': 'news_images\\\\c9ae12c82a6aaafe6b1ada577bd3d080.jpeg', 'Count of Search Phrases': 0, 'Contains Money': False}, {'Title': '$21m Aussie company goes bust', 'Date': '7/8/2024', 'Description': 'A $21m healthcare company that specialises in a hi-tech wireless earbud has gone bust in a fallout with a key supplier.', 'Picture Filename': 'news_images\\\\cf435fd52beb71b78b766536a2734c20.jpeg', 'Count of Search Phrases': 1, 'Contains Money': True}, {'Title': 'Tim Walz gives first speech since being announced as Kamala Harris\u2019 VP pick', 'Date': '6/8/2024', 'Description': 'Minnesota Governor Tim Walz has spoken for the first time since being announced as US Vice President Kamala Harris\u2019 running mate for the 2024...', 'Picture Filename': 'news_images\\\\5b02405445d81e43abf6696cb2791412.jpeg', 'Count of Search Phrases': 0, 'Contains Money': False}]"
+R iO|T|iP|102.731
+EE t|j|102.731
+P iQ:v|m|n|e|207
+M b1:"articles_data"
+AS iQ|b1|T|iP|102.732
+M iS:"NewsScraper.save_to_excel"
+P iR:iS|m|n|e|145
+SE iR|t|102.732
+EA b1|T|iP
+P iT:iS|m|n|e|170
+M bY:"output_dir"
+M iU:"'output'"
+AS iT|bY|z|iU|102.733
+P iV:iS|m|n|e|172
+M iW:"file_path"
+M iX:"'output\\\\news_data.xlsx'"
+AS iV|iW|z|iX|102.734
+M iZ:"Workbook.__init__"
+M i0:"openpyxl.workbook.workbook"
+M i1:"C:\\ProgramData\\robocorp\\ht\\2dd37e0_b1f3c24_691db988\\lib\\site-packages\\openpyxl\\workbook\\workbook.py"
+P iY:iZ|i0|i1|e|59
+SE iY|t|102.735
+M i2:"write_only"
+EA i2|M|N
+M i3:"iso_dates"
+EA i3|M|N
+EE t|j|102.739
+P i4:iS|m|n|e|175
+M i5:"workbook"
+M i6:"Workbook"
+M i7:"<openpyxl.workbook.workbook.Workbook object at 0x00000184B6E09240>"
+AS i4|i5|i6|i7|102.739
+M i9:"Workbook.active"
+P i8:i9|i0|i1|e|153
+SE i8|t|102.74
+P ja:i9|i0|i1|e|159
+M jb:"Worksheet"
+M jc:"<Worksheet \"Sheet\">"
+R ja|jb|jc|102.74
+EE t|j|102.74
+P jd:iS|m|n|e|176
+M je:"worksheet"
+AS jd|je|jb|jc|102.74
+M jg:"_WorkbookChild.title"
+M jh:"openpyxl.workbook.child"
+M ji:"C:\\ProgramData\\robocorp\\ht\\2dd37e0_b1f3c24_691db988\\lib\\site-packages\\openpyxl\\workbook\\child.py"
+P jf:jg|jh|ji|e|71
+SE jf|t|102.741
+M aC:"value"
+M jj:"'News Data'"
+EA aC|z|jj
+EE t|j|102.741
+M jl:"if articles_data"
+P jk:jl|m|n|e|180
+M jm:"IF_SCOPE"
+SE jk|jm|102.742
+EA b1|T|iP
+P jn:iS|m|n|e|182
+M jo:"headers"
+M jp:"['Title', 'Date', 'Description', 'Picture Filename', 'Count of Search Phrases', 'Contains Money']"
+AS jn|jo|T|jp|102.742
+M jr:"Worksheet.append"
+M js:"openpyxl.worksheet.worksheet"
+M jt:"C:\\ProgramData\\robocorp\\ht\\2dd37e0_b1f3c24_691db988\\lib\\site-packages\\openpyxl\\worksheet\\worksheet.py"
+P jq:jr|js|jt|e|641
+SE jq|t|102.743
+M ju:"iterable"
+EA ju|T|jp
+EE t|j|102.744
+M jw:"for article in articles_data"
+P jv:jw|m|n|e|186
+SE jv|b5|102.744
+M jy:"Step: for article in articles_data"
+P jx:jy|m|n|e|186
+SE jx|b8|102.744
+M b9:"article"
+M jz:"{'Title': \"Moderate women voters are not necessarily \u2018shoo-ins' for Kamala Harris\", 'Date': '16/8/2024', 'Description': 'The top issues of independent, moderate female voters are the \u201ceconomy, immigration, crime, healthcare and rising prices\u201d, according to New York...', 'Picture Filename': 'news_images\\\\2da6fdec7367e7f9c1e7436e07949494.jpeg', 'Count of Search Phrases': 1, 'Contains Money': False}"
+EA b9|bt|jz
+SE jq|t|102.745
+M jA:"[\"Moderate women voters are not necessarily \u2018shoo-ins' for Kamala Harris\", '16/8/2024', 'The top issues of independent, moderate female voters are the \u201ceconomy, immigration, crime, healthcare and rising prices\u201d, according to New York...', 'news_images\\\\2da6fdec7367e7f9c1e7436e07949494.jpeg', 1, False]"
+EA ju|T|jA
+EE t|j|102.745
+EE b8|j|102.745
+SE jx|b8|102.746
+M jB:"{'Title': \"'Pro Medicus again hit the ball out of the park'\", 'Date': '16/8/2024', 'Description': 'ASX health stocks have finished the week up 0.8% as Morgans healthcare analyst Scott Power says \u201cPro Medicus again hit the ball out of the park\u201d with their FY24 results.', 'Picture Filename': 'news_images\\\\a58d53e872fa979b08eda8e04f4e9608.jpeg', 'Count of Search Phrases': 1, 'Contains Money': False}"
+EA b9|bt|jB
+SE jq|t|102.746
+M jC:"[\"'Pro Medicus again hit the ball out of the park'\", '16/8/2024', 'ASX health stocks have finished the week up 0.8% as Morgans healthcare analyst Scott Power says \u201cPro Medicus again hit the ball out of the park\u201d with their FY24 results.', 'news_images\\\\a58d53e872fa979b08eda8e04f4e9608.jpeg', 1, False]"
+EA ju|T|jC
+EE t|j|102.746
+EE b8|j|102.747
+SE jx|b8|102.747
+M jD:"{'Title': 'Crowd leaves as Biden begins talking', 'Date': '16/8/2024', 'Description': 'Dozens of Democrats left an election rally event early when outgoing US President Joe Biden took to the stage to speak.', 'Picture Filename': 'news_images\\\\da3e96d55916af12816d63b8230c6569.jpeg', 'Count of Search Phrases': 0, 'Contains Money': False}"
+EA b9|bt|jD
+SE jq|t|102.747
+M jE:"['Crowd leaves as Biden begins talking', '16/8/2024', 'Dozens of Democrats left an election rally event early when outgoing US President Joe Biden took to the stage to speak.', 'news_images\\\\da3e96d55916af12816d63b8230c6569.jpeg', 0, False]"
+EA ju|T|jE
+EE t|j|102.748
+EE b8|j|102.748
+SE jx|b8|102.748
+M jF:"{'Title': '\u2018Long time coming\u2019: UK descending into \u2018chaos\u2019', 'Date': '15/8/2024', 'Description': 'On tonight\u2019s episode of Paul Murray Live, Sky News host Paul Murray discusses the United Kingdom descending into chaos, mental healthcare, US...', 'Picture Filename': 'news_images\\\\4c42a6d9019eeb150797d22fa40268cc.jpeg', 'Count of Search Phrases': 1, 'Contains Money': False}"
+EA b9|bt|jF
+SE jq|t|102.748
+M jG:"['\u2018Long time coming\u2019: UK descending into \u2018chaos\u2019', '15/8/2024', 'On tonight\u2019s episode of Paul Murray Live, Sky News host Paul Murray discusses the United Kingdom descending into chaos, mental healthcare, US...', 'news_images\\\\4c42a6d9019eeb150797d22fa40268cc.jpeg', 1, False]"
+EA ju|T|jG
+EE t|j|102.749
+EE b8|j|102.749
+SE jx|b8|102.749
+M jH:"{'Title': 'Texas woman who fled state for abortion makes case for Harris campaign', 'Date': '15/8/2024', 'Description': 'A Texas woman forced to flee the state for an emergency abortion recounted her harrowing ordeal to Reuters, as she makes her case for Democratic...', 'Picture Filename': 'news_images\\\\9d17bc3351037a010486d12da4ecf45d.jpeg', 'Count of Search Phrases': 0, 'Contains Money': False}"
+EA b9|bt|jH
+SE jq|t|102.749
+M jI:"['Texas woman who fled state for abortion makes case for Harris campaign', '15/8/2024', 'A Texas woman forced to flee the state for an emergency abortion recounted her harrowing ordeal to Reuters, as she makes her case for Democratic...', 'news_images\\\\9d17bc3351037a010486d12da4ecf45d.jpeg', 0, False]"
+EA ju|T|jI
+EE t|j|102.749
+EE b8|j|102.749
+SE jx|b8|102.75
+M jJ:"{'Title': \"Indian healthcare workers demand justice after colleague's rape, murder; protests spread nationwide\", 'Date': '14/8/2024', 'Description': 'Healthcare workers in India demand changes following the rape and murder of their colleague.', 'Picture Filename': 'news_images\\\\b7df58f9d22a9f5fe04fe08c4d17e4c3.jpeg', 'Count of Search Phrases': 2, 'Contains Money': False}"
+EA b9|bt|jJ
+SE jq|t|102.75
+M jK:"[\"Indian healthcare workers demand justice after colleague's rape, murder; protests spread nationwide\", '14/8/2024', 'Healthcare workers in India demand changes following the rape and murder of their colleague.', 'news_images\\\\b7df58f9d22a9f5fe04fe08c4d17e4c3.jpeg', 2, False]"
+EA ju|T|jK
+EE t|j|102.75
+EE b8|j|102.75
+SE jx|b8|102.75
+M jL:"{'Title': 'ASX 200 finishes up with most sectors \u2018in the green\u2019', 'Date': '14/8/2024', 'Description': 'Sky News Business Reporter Edward Boyd says the ASX 200 opened higher this morning with most sectors \u201cin the green\u201d.', 'Picture Filename': 'news_images\\\\96a123c0753cbad772305fafc21584cb.jpeg', 'Count of Search Phrases': 0, 'Contains Money': False}"
+EA b9|bt|jL
+SE jq|t|102.75
+M jM:"['ASX 200 finishes up with most sectors \u2018in the green\u2019', '14/8/2024', 'Sky News Business Reporter Edward Boyd says the ASX 200 opened higher this morning with most sectors \u201cin the green\u201d.', 'news_images\\\\96a123c0753cbad772305fafc21584cb.jpeg', 0, False]"
+EA ju|T|jM
+EE t|j|102.751
+EE b8|j|102.751
+SE jx|b8|102.751
+M jN:"{'Title': 'How ASX responded to shock court action', 'Date': '14/8/2024', 'Description': 'Australia\u2019s corporate watchdog sparked alarm in the markets after it announced court action against the ASX over alleged misleading statements.', 'Picture Filename': 'news_images\\\\b1c60a7e91961d1bd3fe2b661a6d79b5.jpeg', 'Count of Search Phrases': 0, 'Contains Money': False}"
+EA b9|bt|jN
+SE jq|t|102.751
+M jO:"['How ASX responded to shock court action', '14/8/2024', 'Australia\u2019s corporate watchdog sparked alarm in the markets after it announced court action against the ASX over alleged misleading statements.', 'news_images\\\\b1c60a7e91961d1bd3fe2b661a6d79b5.jpeg', 0, False]"
+EA ju|T|jO
+EE t|j|102.751
+EE b8|j|102.751
+SE jx|b8|102.751
+M jP:"{'Title': \"CQC: Risks not adequately mitigated during Calocane's care\", 'Date': '13/8/2024', 'Description': 'Care Quality Commission\\'s Chris Dzikiti has said medical and police records showed Valdo Calocane would have relapsed into \"distressing and potentially...', 'Picture Filename': 'news_images\\\\f202e7a10463e5ba33fa0a9334533d4d.jpeg', 'Count of Search Phrases': 0, 'Contains Money': False}"
+EA b9|bt|jP
+SE jq|t|102.751
+M jQ:"[\"CQC: Risks not adequately mitigated during Calocane's care\", '13/8/2024', 'Care Quality Commission\\'s Chris Dzikiti has said medical and police records showed Valdo Calocane would have relapsed into \"distressing and potentially...', 'news_images\\\\f202e7a10463e5ba33fa0a9334533d4d.jpeg', 0, False]"
+EA ju|T|jQ
+EE t|j|102.752
+EE b8|j|102.752
+SE jx|b8|102.752
+M jR:"{'Title': 'Healthcare stocks dragged down by CSL', 'Date': '13/8/2024', 'Description': 'The ASX made a third-straight day of gains after a week of global volatility, with financial and consumer stocks pushing a marginal gain.', 'Picture Filename': 'news_images\\\\2584f646b4d713d5bf42b404d8ccc6a1.jpeg', 'Count of Search Phrases': 1, 'Contains Money': False}"
+EA b9|bt|jR
+SE jq|t|102.752
+M jS:"['Healthcare stocks dragged down by CSL', '13/8/2024', 'The ASX made a third-straight day of gains after a week of global volatility, with financial and consumer stocks pushing a marginal gain.', 'news_images\\\\2584f646b4d713d5bf42b404d8ccc6a1.jpeg', 1, False]"
+EA ju|T|jS
+EE t|j|102.752
+EE b8|j|102.752
+SE jx|b8|102.752
+M jT:"{'Title': 'CSL drags health sector lower', 'Date': '13/8/2024', 'Description': 'Earnings season is now in full swing now as heavyweight CSL dropped 4pc, dragging the health sector down.', 'Picture Filename': 'news_images\\\\09dd5bc00ca4d679b00524a7dafe6157.jpeg', 'Count of Search Phrases': 0, 'Contains Money': False}"
+EA b9|bt|jT
+SE jq|t|102.752
+M jU:"['CSL drags health sector lower', '13/8/2024', 'Earnings season is now in full swing now as heavyweight CSL dropped 4pc, dragging the health sector down.', 'news_images\\\\09dd5bc00ca4d679b00524a7dafe6157.jpeg', 0, False]"
+EA ju|T|jU
+EE t|j|102.752
+EE b8|j|102.753
+SE jx|b8|102.753
+M jV:"{'Title': 'Healthcare sector cops a whack as the ASX 200 flails about', 'Date': '12/8/2024', 'Description': 'Top 10 at 11 is Stockhead\u2019s super quick morning look at the ASX and its market sectors and is a way to help frame the day in trading.', 'Picture Filename': 'news_images\\\\fe8a23f9e06e4b532946f00f167dbb95.jpeg', 'Count of Search Phrases': 1, 'Contains Money': False}"
+EA b9|bt|jV
+SE jq|t|102.753
+M jW:"['Healthcare sector cops a whack as the ASX 200 flails about', '12/8/2024', 'Top 10 at 11 is Stockhead\u2019s super quick morning look at the ASX and its market sectors and is a way to help frame the day in trading.', 'news_images\\\\fe8a23f9e06e4b532946f00f167dbb95.jpeg', 1, False]"
+EA ju|T|jW
+EE t|j|102.753
+EE b8|j|102.753
+SE jx|b8|102.753
+M jX:"{'Title': 'Australian state given shameful title', 'Date': '12/8/2024', 'Description': 'One state is famed for its spectacular weather and enviable lifestyle, but the beauty masks a disturbing crisis.', 'Picture Filename': 'news_images\\\\3edeae1dbc8c18cf4dfb6343049dea1f.jpeg', 'Count of Search Phrases': 0, 'Contains Money': False}"
+EA b9|bt|jX
+SE jq|t|102.753
+M jY:"['Australian state given shameful title', '12/8/2024', 'One state is famed for its spectacular weather and enviable lifestyle, but the beauty masks a disturbing crisis.', 'news_images\\\\3edeae1dbc8c18cf4dfb6343049dea1f.jpeg', 0, False]"
+EA ju|T|jY
+EE t|j|102.754
+EE b8|j|102.754
+SE jx|b8|102.754
+M jZ:"{'Title': \"'Concerning': IV fluid shortage to hit the 'whole healthcare system'\", 'Date': '12/8/2024', 'Description': 'Australian Patients Association Chair Michele Robbins discusses the \u201cconcerning\u201d IV fluid shortage affecting the \u201cwhole healthcare system\u201d.', 'Picture Filename': 'news_images\\\\a17147aa3ee9dfa2dee63e99ffe0303d.jpeg', 'Count of Search Phrases': 2, 'Contains Money': False}"
+EA b9|bt|jZ
+SE jq|t|102.754
+M j0:"[\"'Concerning': IV fluid shortage to hit the 'whole healthcare system'\", '12/8/2024', 'Australian Patients Association Chair Michele Robbins discusses the \u201cconcerning\u201d IV fluid shortage affecting the \u201cwhole healthcare system\u201d.', 'news_images\\\\a17147aa3ee9dfa2dee63e99ffe0303d.jpeg', 2, False]"
+EA ju|T|j0
+EE t|j|102.754
+EE b8|j|102.754
+SE jx|b8|102.754
+M j1:"{'Title': \"Australia's healthcare system 'not fit for purpose'\", 'Date': '11/8/2024', 'Description': 'Pfizer\u2019s Australia and New Zealand Managing Director Anne Harris claims Australia\u2019s current healthcare system is currently \u201cnot fit for purpose\u201d....', 'Picture Filename': 'news_images\\\\8437f44a0d09b49c3b3945dac354cd7a.jpeg', 'Count of Search Phrases': 2, 'Contains Money': False}"
+EA b9|bt|j1
+SE jq|t|102.754
+M j2:"[\"Australia's healthcare system 'not fit for purpose'\", '11/8/2024', 'Pfizer\u2019s Australia and New Zealand Managing Director Anne Harris claims Australia\u2019s current healthcare system is currently \u201cnot fit for purpose\u201d....', 'news_images\\\\8437f44a0d09b49c3b3945dac354cd7a.jpeg', 2, False]"
+EA ju|T|j2
+EE t|j|102.755
+EE b8|j|102.755
+SE jx|b8|102.755
+M j3:"{'Title': 'ASX health stocks dip, but recover', 'Date': '9/8/2024', 'Description': 'ASX health stocks regained ground on Friday but still were down over the past five days. Yep, it\u2019s been a volatile old week, says Morgans expert Scott Power.    ', 'Picture Filename': 'news_images\\\\26e3c79087156e34b58da64fa911883e.jpeg', 'Count of Search Phrases': 0, 'Contains Money': False}"
+EA b9|bt|j3
+SE jq|t|102.755
+M j4:"['ASX health stocks dip, but recover', '9/8/2024', 'ASX health stocks regained ground on Friday but still were down over the past five days. Yep, it\u2019s been a volatile old week, says Morgans expert Scott Power.    ', 'news_images\\\\26e3c79087156e34b58da64fa911883e.jpeg', 0, False]"
+EA ju|T|j4
+EE t|j|102.755
+EE b8|j|102.755
+SE jx|b8|102.755
+M j5:"{'Title': 'Sad reason athletes in for \u2018shock of the world\u2019', 'Date': '9/8/2024', 'Description': 'They\u2019ve become the nation\u2019s heroes, but there\u2019s a myth that needs to be busted about Olympic athletes.', 'Picture Filename': 'news_images\\\\1f2eb21b595010b5daab36579b483d6a.jpeg', 'Count of Search Phrases': 0, 'Contains Money': False}"
+EA b9|bt|j5
+SE jq|t|102.756
+M j6:"['Sad reason athletes in for \u2018shock of the world\u2019', '9/8/2024', 'They\u2019ve become the nation\u2019s heroes, but there\u2019s a myth that needs to be busted about Olympic athletes.', 'news_images\\\\1f2eb21b595010b5daab36579b483d6a.jpeg', 0, False]"
+EA ju|T|j6
+EE t|j|102.756
+EE b8|j|102.756
+SE jx|b8|102.756
+M j7:"{'Title': 'Worrying symptoms linked to supplement', 'Date': '8/8/2024', 'Description': 'An ingredient, thought to help with weight loss, can cause some concerning symptoms.', 'Picture Filename': 'news_images\\\\c9ae12c82a6aaafe6b1ada577bd3d080.jpeg', 'Count of Search Phrases': 0, 'Contains Money': False}"
+EA b9|bt|j7
+SE jq|t|102.756
+M j8:"['Worrying symptoms linked to supplement', '8/8/2024', 'An ingredient, thought to help with weight loss, can cause some concerning symptoms.', 'news_images\\\\c9ae12c82a6aaafe6b1ada577bd3d080.jpeg', 0, False]"
+EA ju|T|j8
+EE t|j|102.756
+EE b8|j|102.757
+SE jx|b8|102.757
+M j9:"{'Title': '$21m Aussie company goes bust', 'Date': '7/8/2024', 'Description': 'A $21m healthcare company that specialises in a hi-tech wireless earbud has gone bust in a fallout with a key supplier.', 'Picture Filename': 'news_images\\\\cf435fd52beb71b78b766536a2734c20.jpeg', 'Count of Search Phrases': 1, 'Contains Money': True}"
+EA b9|bt|j9
+SE jq|t|102.757
+M ka:"['$21m Aussie company goes bust', '7/8/2024', 'A $21m healthcare company that specialises in a hi-tech wireless earbud has gone bust in a fallout with a key supplier.', 'news_images\\\\cf435fd52beb71b78b766536a2734c20.jpeg', 1, True]"
+EA ju|T|ka
+EE t|j|102.757
+EE b8|j|102.757
+SE jx|b8|102.757
+M kb:"{'Title': 'Tim Walz gives first speech since being announced as Kamala Harris\u2019 VP pick', 'Date': '6/8/2024', 'Description': 'Minnesota Governor Tim Walz has spoken for the first time since being announced as US Vice President Kamala Harris\u2019 running mate for the 2024...', 'Picture Filename': 'news_images\\\\5b02405445d81e43abf6696cb2791412.jpeg', 'Count of Search Phrases': 0, 'Contains Money': False}"
+EA b9|bt|kb
+SE jq|t|102.757
+M kc:"['Tim Walz gives first speech since being announced as Kamala Harris\u2019 VP pick', '6/8/2024', 'Minnesota Governor Tim Walz has spoken for the first time since being announced as US Vice President Kamala Harris\u2019 running mate for the 2024...', 'news_images\\\\5b02405445d81e43abf6696cb2791412.jpeg', 0, False]"
+EA ju|T|kc
+EE t|j|102.758
+EE b8|j|102.758
+EE b5|j|102.758
+EE jm|j|102.758
+M ke:"Workbook.save"
+P kd:ke|i0|i1|e|373
+SE kd|t|102.758
+M c1:"filename"
+EA c1|z|iX
+EE t|j|102.782
+M kf:"Excel file saved successfully to output\\news_data.xlsx"
+C dB|kf|102.783
+C dB|dD|102.783
+EE t|j|102.783
+M kh:"ChromiumDriver.quit"
+M ki:"selenium.webdriver.chromium.webdriver"
+M kj:"C:\\ProgramData\\robocorp\\ht\\2dd37e0_b1f3c24_691db988\\lib\\site-packages\\selenium\\webdriver\\chromium\\webdriver.py"
+P kg:kh|ki|kj|e|183
+SE kg|t|102.783
+EE t|j|105.191
+EE t|j|105.192
+EE t|j|109.268
+M r:"task_name"
+C r|l|109.268
+M f:"regular"
+M kk:" status: "
+C f|kk|109.268
+M kl:"PASS\n"
+C f|kl|109.272
+M km:"================================================================================\n"
+C f|km|109.273
+ET j|e|109.273
+M ko:"Teardown tasks"
+M kp:"teardown"
+P kn:ko|kp|e|e|0
+ST kn|109.273
+M kq:"Process snapshot"
+SPS kq|109.29
+M kr:"System information:\nMemory: Total: 15.9 G, Available: 6.1 G, Used: 61.6 %\nCPUs: 4"
+P ks:e|e|e|e|0
+L I|kr|ks|0|109.452
+M kt:"Current Process: python.exe (pid: 7108, status: running)\nCommand Line: C:\\ProgramData\\robocorp\\ht\\2dd37e0_b1f3c24_691db988\\python.exe -m robocorp.tasks run tasks.py\nStarted: 17:08:42\nParent pid: 16992\nResident Set Size: 77.8 M\nVirtual Memory Size: 61.0 M"
+L I|kt|ks|0|109.47
+M ku:"OutputToPortThread|Thread ID: 15776 (daemon)"
+STD ku|109.47
+M kv:"C:\\ProgramData\\robocorp\\ht\\2dd37e0_b1f3c24_691db988\\lib\\threading.py"
+M kw:"_bootstrap"
+M kx:"self._bootstrap_inner()"
+TBE kv|973|kw|kx
+M ky:"self"
+M kz:"Thread"
+M kA:"<Thread(OutputToPortThread, started daemon 15776)>"
+TBV ky|kz|kA
+M kB:"_bootstrap_inner"
+M kC:"self.run()"
+TBE kv|1016|kB|kC
+TBV ky|kz|kA
+M kD:"self._target(*self._args, **self._kwargs)"
+TBE kv|953|l|kD
+TBV ky|kz|kA
+M kE:"C:\\ProgramData\\robocorp\\ht\\2dd37e0_b1f3c24_691db988\\lib\\site-packages\\robocorp\\tasks\\_log_output_setup.py"
+M kF:"write_in_thread"
+M kG:"msg = q.get()"
+TBE kE|73|kF|kG
+M kH:"msg"
+M kI:"'ST kn|109.261\\n'"
+TBV kH|z|kI
+M kJ:"client_socket"
+M kK:"socket"
+M kL:"<socket.socket fd=748, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 52275), raddr=('127.0.0.1', 57886)>"
+TBV kJ|kK|kL
+M kM:"log"
+M kN:"module"
+M kO:"<module 'robocorp.log' from 'C:\\\\ProgramData\\\\robocorp\\\\ht\\\\2dd37e0_b1f3c24_691db988\\\\lib\\\\site-packages\\\\robocorp\\\\log\\\\__init__.py'>"
+TBV kM|kN|kO
+M kP:"port_in_env"
+M kQ:"'57886'"
+TBV kP|z|kQ
+M kR:"q"
+M kS:"Queue"
+M kT:"<queue.Queue object at 0x00000184B752B100>"
+TBV kR|kS|kT
+M kU:"C:\\ProgramData\\robocorp\\ht\\2dd37e0_b1f3c24_691db988\\lib\\queue.py"
+M kV:"get"
+M kW:"self.not_empty.wait()"
+TBE kU|171|kV|kW
+TBV ky|kS|kT
+M kX:"block"
+M af:"True"
+TBV kX|M|af
+M a3:"timeout"
+TBV a3|G|H
+M kY:"wait"
+M kZ:"waiter.acquire()"
+TBE kv|320|kY|kZ
+M k0:"Condition"
+M k1:"<Condition(<unlocked _thread.lock object at 0x00000184B74E5A40>, 1)>"
+TBV ky|k0|k1
+TBV a3|G|H
+M k2:"waiter"
+M k3:"lock"
+M k4:"<locked _thread.lock object at 0x00000184B8322580>"
+TBV k2|k3|k4
+M k5:"saved_state"
+TBV k5|G|H
+M k6:"gotit"
+TBV k6|M|N
+ETD 109.47
+M k7:"MainThread|Thread ID: 16852 (non daemon)"
+STD k7|109.47
+M k8:"C:\\ProgramData\\robocorp\\ht\\2dd37e0_b1f3c24_691db988\\lib\\site-packages\\robocorp\\log\\__init__.py"
+M k9:"process_snapshot"
+M la:"robo_logger.process_snapshot()"
+TBE k8|270|k9|la
+M lb:"logger_instances"
+M lc:"{<robocorp.log._robo_logger._RoboLogger object at 0x00000184B68C8190>: 1, <robocorp.log._robo_logger._RoboLogger object at 0x00000184B8319C90>: 1}"
+TBV lb|bt|lc
+M ld:"robo_logger"
+M le:"_RoboLogger"
+M lf:"<robocorp.log._robo_logger._RoboLogger object at 0x00000184B68C8190>"
+TBV ld|le|lf
+M lg:"C:\\ProgramData\\robocorp\\ht\\2dd37e0_b1f3c24_691db988\\lib\\site-packages\\robocorp\\log\\_robo_logger.py"
+M lh:"new_func"
+M li:"return func(self, *args, **kwargs)"
+TBE lg|20|lh|li
+TBV ky|le|lf
+M lj:"args"
+M aT:"tuple"
+M lk:"()"
+TBV lj|aT|lk
+M ll:"kwargs"
+TBV ll|bt|dA
+M lm:"func"
+M bg:"function"
+M ln:"<function _RoboLogger.process_snapshot at 0x00000184B82F9900>"
+TBV lm|bg|ln
+M lo:"return self._robot_output_impl.process_snapshot(hide_vars)"
+TBE lg|416|k9|lo
+TBV ky|le|lf
+M lp:"hide_vars"
+TBV lp|M|N
+M lq:"C:\\ProgramData\\robocorp\\ht\\2dd37e0_b1f3c24_691db988\\lib\\site-packages\\robocorp\\log\\_robo_output_impl.py"
+M lr:"self._dump_threads(hide_vars)"
+TBE lq|748|k9|lr
+TBV lp|M|N
+TBV kM|kN|kO
+M ls:"entry_id"
+M lt:"'ps_0'"
+TBV ls|z|lt
+M lu:"entry_type"
+M lv:"'process_snapshot'"
+TBV lu|z|lv
+M lw:"psutil"
+M lx:"<module 'psutil' from 'C:\\\\ProgramData\\\\robocorp\\\\ht\\\\2dd37e0_b1f3c24_691db988\\\\lib\\\\site-packages\\\\psutil\\\\__init__.py'>"
+TBV lw|kN|lx
+M ly:"AccessDenied"
+M J:"type"
+M lz:"<class 'psutil.AccessDenied'>"
+TBV ly|J|lz
+M lA:"NoSuchProcess"
+M lB:"<class 'psutil.NoSuchProcess'>"
+TBV lA|J|lB
+M lC:"ZombieProcess"
+M lD:"<class 'psutil.ZombieProcess'>"
+TBV lC|J|lD
+M lE:"curr_process"
+M lF:"Process"
+M lG:"psutil.Process(pid=7108, name='python.exe', status='running', started='17:08:42')"
+TBV lE|lF|lG
+M lH:"log_info"
+M lI:"<function _RoboOutputImpl.process_snapshot.<locals>.log_info at 0x00000184BAE177F0>"
+TBV lH|bg|lI
+M lJ:"memory_info"
+M lK:"'Total: 15.9 G, Available: 6.1 G, Used: 61.6 %'"
+TBV lJ|z|lK
+M lL:"child_i"
+TBV lL|al|eo
+M lM:"child"
+TBV lM|lF|lG
+M cu:"name"
+M lN:"'python.exe'"
+TBV cu|z|lN
+M lO:"status"
+M lP:"'running'"
+TBV lO|z|lP
+M lQ:"create_time"
+M lR:"'17:08:42'"
+TBV lQ|z|lR
+M lS:"ppid"
+M lT:"'16992'"
+TBV lS|z|lT
+M lU:"cmdline"
+M lV:"'C:\\\\ProgramData\\\\robocorp\\\\ht\\\\2dd37e0_b1f3c24_691db988\\\\python.exe -m robocorp.tasks run tasks.py'"
+TBV lU|z|lV
+M lW:"rss"
+M lX:"'77.8 M'"
+TBV lW|z|lX
+M lY:"vms"
+M lZ:"'61.0 M'"
+TBV lY|z|lZ
+M l0:"proc_memory_info"
+M l1:"pmem"
+M l2:"pmem(rss=81539072, vms=63991808, num_page_faults=119504, peak_wset=87797760, wset=81539072, peak_paged_pool=208448, paged_pool=208272, peak_nonpaged_pool=286312, nonpaged_pool=40168, pagefile=63991808, peak_pagefile=71512064, private=63991808)"
+TBV l0|l1|l2
+M bl:"message"
+M l3:"'Current Process: python.exe (pid: 7108, status: running)\\nCommand Line: C:\\\\ProgramData\\\\robocorp\\\\ht\\\\2dd37e0_b1f3c24_691db988\\\\python.exe -m robocorp.tasks run tasks.py\\nStarted: 17:08:42\\nParent pid: 16992\\nResident Set Size: 77.8 M\\nVirtual Memory Size: 61.0 M'"
+TBV bl|z|l3
+M l4:"_RoboOutputImpl"
+M l5:"<robocorp.log._robo_output_impl._RoboOutputImpl object at 0x00000184B75131C0>"
+TBV ky|l4|l5
+M l6:"_dump_threads"
+M l7:"stack.append((f, f.f_lineno))"
+TBE lq|769|l6|l7
+TBV ky|l4|l5
+TBV lp|M|N
+M l8:"thread_id"
+M l9:"16852"
+TBV l8|al|l9
+M ma:"frame"
+M mb:"<frame at 0x00000184BAE54C40, file 'C:\\\\ProgramData\\\\robocorp\\\\ht\\\\2dd37e0_b1f3c24_691db988\\\\lib\\\\site-packages\\\\robocorp\\\\log\\\\_robo_output_impl.py', line 773, code _dump_threads>"
+TBV ma|ma|mb
+M mc:"thread"
+M md:"_MainThread"
+M me:"<_MainThread(MainThread, started 16852)>"
+TBV mc|md|me
+M cn:"title"
+M mf:"'MainThread|Thread ID: 16852 (non daemon)'"
+TBV cn|z|mf
+M mg:"f"
+M mh:"<frame at 0x00000184B6B0BA50, file 'C:\\\\ProgramData\\\\robocorp\\\\ht\\\\2dd37e0_b1f3c24_691db988\\\\lib\\\\site-packages\\\\robocorp\\\\tasks\\\\_commands.py', line 494, code run>"
+TBV mg|ma|mh
+M mi:"stack"
+M mj:"[(<frame at 0x00000184BAE3A480, file 'C:\\\\ProgramData\\\\robocorp\\\\ht\\\\2dd37e0_b1f3c24_691db988\\\\lib\\\\site-packages\\\\robocorp\\\\log\\\\__init__.py', line 270, code process_snapshot>, 270), (<frame at 0x00000184B8195440, file 'C:\\\\ProgramData\\\\robocorp\\\\ht\\\\2dd37e0_b1f3c24_691db988\\\\lib\\\\site-packages\\\\robocorp\\\\log\\\\_robo_logger.py', line 20, code new_func>, 20), (<frame at 0x00000184BAE19BE0, file 'C:\\\\ProgramData\\\\robocorp\\\\ht\\\\2dd37e0_b1f3c24_691db988\\\\lib\\\\site-packages\\\\robocorp\\\\log\\\\_robo_logger.py', line 416, code process_snapshot>, 416), (<frame at 0x00000184B7C0B5F0, file 'C:\\\\ProgramData\\\\robocorp\\\\ht\\\\2dd37e0_b1f3c24_691db988\\\\lib\\\\site-packages\\\\robocorp\\\\log\\\\_robo_output_impl.py', line 748, code process_snapshot>, 748), (<frame at 0x00000184BAE54C40, file 'C:\\\\ProgramData\\\\robocorp\\\\ht\\\\2dd37e0_b1f3c24_691db988\\\\lib\\\\site-packages\\\\robocorp\\\\log\\\\_robo_output_impl.py', line 773, code _dump_threads>, 769)]"
+TBV mi|T|mj
+ETD 109.486
+EPS 109.486
+ET j|e|109.505
+ER j|109.505
